@@ -1,11 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import NavBar from './components/NavBar/NavBar.vue'
+import NavBar from '@/components/NavBar/NavBar.vue'
+import WebFooter from '@/components/WebFooter.vue'
 </script>
 
 <template>
-  <div ck>
-    <NavBar />
-    <RouterView />
-  </div>
+  <NavBar />
+  <RouterView />
+  <WebFooter />
 </template>

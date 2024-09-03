@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { Icon } from '@iconify/vue'
 import MenuList from './MenuList.vue'
+import logo from '@/assets/MotionLogo.png'
 let openMenu = ref(false)
 
 const toggleMenu = () => {
@@ -10,10 +11,14 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <nav class="flex items-center w-full px-3 py-3 border-b-2 border-b-gray-300 md:px-8">
+  <nav
+    class="sticky top-0 z-10 flex items-center w-full px-3 py-3 bg-white border-b-2 border-b-gray-300 md:px-8"
+  >
     <MenuList className="hidden font-bold! text-gray-800" />
     <!-- logo -->
-    <div class="flex-grow text-xl sm:text-center">Motion</div>
+    <div class="flex-grow text-xl sm:text-center">
+      <img :src="logo" alt="Motion Logo" class="mx-auto" />
+    </div>
     <!-- Toggle button -->
     <button class="sm:hidden" @click="toggleMenu">
       <Icon icon="material-symbols:close-rounded" height="25" v-if="openMenu" />
